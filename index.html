@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yunus Ujjaini</title>
+    <link rel="stylesheet" href="Scss/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo2.png">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="contact" id='contact'>
+        <a class="call" href="tel:9714275943">
+            Call
+        </a>
+        <a class="email" href="mailto:yunus.ujjaini52@gmail.com">
+            Email
+        </a>
+    </div>
+    <section class="intro" id="introSec">
+        <div class="intro-top">
+            <p class="intro-top-header" id="greeting">
+                Hello!
+            </p>
+            <p class="intro-top-para">
+                I am Yunus. Web Developer and Designer from India.
+            </p>
+            <p class="intro-top-para">
+                I support Companies in developing or Redesigning their Digital identity.
+            </p>
+            <p class="intro-top-para">
+                Designing with love since <span class="intro-top-para-years">4 <span class="intro-top-para-years-sub">years.</span></span>
+            </p>
+        </div>
+        <div class="intro-middle" id="bigCursor">
+            <p class="intro-middle-sub">
+                Welcome to my
+            </p>
+            <h3 class="intro-middle-head">
+                Work Portfolio
+            </h3>
+        </div>
+        <div class="intro-bottom">
+            <p class="intro-bottom-head">
+                #Things I Love
+            </p>
+            <div class="intro-bottom-paras">
+                <p class="intro-bottom-para">
+                    #Minimalistic Designs
+                </p>
+                <p class="intro-bottom-para">
+                    #Great User Experiences
+                </p>
+                <p class="intro-bottom-para">
+                    #Total User Accessibility
+                </p>
+                <p class="intro-bottom-para">
+                    #Oceans
+                </p>
+            </div>
+        </div>
+        <div class="arrow">
+            <p class='arrow-text'>Scroll</p>
+            <svg class="arrow-intro" width="16" height="150" viewBox="0 0 16 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.45711 174.711C7.8506 175.099 8.48375 175.094 8.87129 174.701L15.1866 168.288C15.5741 167.895 15.5693 167.262 15.1758 166.874C14.7823 166.487 14.1492 166.491 13.7616 166.885L8.14804 172.585L2.44827 166.971C2.05478 166.584 1.42163 166.588 1.0341 166.982C0.646557 167.375 0.651379 168.009 1.04487 168.396L7.45711 174.711ZM5.84122 1.00865L7.15884 174.007L9.15878 173.991L7.84116 0.993421L5.84122 1.00865Z" fill="#696969"/>
+            </svg>  
+        </div>
+    </section>
+    <section class="main" id="main">
+        <div class="mywork">
+            <svg class="arrow-mywork" width="16" height="150" viewBox="0 0 16 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.45711 174.711C7.8506 175.099 8.48375 175.094 8.87129 174.701L15.1866 168.288C15.5741 167.895 15.5693 167.262 15.1758 166.874C14.7823 166.487 14.1492 166.491 13.7616 166.885L8.14804 172.585L2.44827 166.971C2.05478 166.584 1.42163 166.588 1.0341 166.982C0.646557 167.375 0.651379 168.009 1.04487 168.396L7.45711 174.711ZM5.84122 1.00865L7.15884 174.007L9.15878 173.991L7.84116 0.993421L5.84122 1.00865Z" fill="#696969"/>
+            </svg>  
+            <p class='arrow-text-mywork'>My Work</p>
+        </div>
+        
+        <h1 class="main-heading" id="heading">Yunus Ujjaini</h1>
+        <div class="selected-proj">
+                <img onclick="openDetails('Loopstudios');" class="image" src="images/Loopstudios/loopstudiosMain.png" alt="loopstudios">
+            
+        </div>
+        <div class="filter-section">
+            <button onclick="filter('All')" id="All" class="filter-btn filter-btn-active">All</button>
+            <button onclick="filter('Solution')" id="Solution" class="filter-btn">Solutions</button>
+            <button onclick="filter('Template')" id="Template" class="filter-btn">Templates</button>
+            <button onclick="filter('Work')" id="Work" class="filter-btn">Work</button>
+        </div>
+        <div class="work" id="work">
+            <!-- <div class="proj" data-attr="Loopstudios">
+                <img class="image" src="images/loopstudios.png" alt="loopstudios">
+            </div>
+            <div class="proj" data-attr="Insure">
+                <img class="image" src="images/insure.png" alt="insure">
+            </div>
+            <div class="proj" data-attr="Social Dashboard">
+                <img class="image" src="images/socialMedia.png" alt="socialMedia">
+            </div>
+            <div class="proj" data-attr="Block">
+                <img class="image" src="images/block.svg" alt="block">
+            </div>
+            <div class="proj" data-attr="Social Dashboard">
+                <img class="image" src="images/socialMedia2.png" alt="socialMedia2">
+            </div>
+            <div class="proj" data-attr="Loopstudios">
+                <img class="image" src="images/loopstudios.png" alt="loopstudios">
+            </div>
+            <div class="proj" data-attr="Insure">
+                <img class="image" src="images/insure.png" alt="insure">
+            </div>
+            <div class="proj" data-attr="Social Dashboard">
+                <img class="image" src="images/socialMedia.png" alt="socialMedia">
+            </div>
+            <div class="proj" data-attr="Block">
+                <img class="image" src="images/block.svg" alt="block">
+            </div>
+            <div class="proj" data-attr="Social Dashboard">
+                <img class="image" src="images/socialMedia2.png" alt="socialMedia2">
+            </div>
+            <div class="proj" data-attr="Loopstudios">
+                <img class="image" src="images/loopstudios.png" alt="loopstudios">
+            </div>
+            <div class="proj" data-attr="Insure">
+                <img class="image" src="images/insure.png" alt="insure">
+            </div>
+            <div class="proj" data-attr="Social Dashboard">
+                <img class="image" src="images/socialMedia.png" alt="socialMedia">
+            </div>
+            <div class="proj" data-attr="Block">
+                <img class="image" src="images/block.svg" alt="block">
+            </div>
+            <div class="proj" data-attr="Social Dashboard">
+                <img class="image" src="images/socialMedia2.png" alt="socialMedia2">
+            </div>
+            <div class="proj" data-attr="Loopstudios">
+                <img class="image" src="images/loopstudios.png" alt="loopstudios">
+            </div>
+            <div class="proj" data-attr="Insure">
+                <img class="image" src="images/insure.png" alt="insure">
+            </div>
+            <div class="proj" data-attr="Social Dashboard">
+                <img class="image" src="images/socialMedia.png" alt="socialMedia">
+            </div>
+            <div class="proj" data-attr="Block">
+                <img class="image" src="images/block.svg" alt="block">
+            </div>
+            <div class="proj" data-attr="Social Dashboard">
+                <img class="image" src="images/socialMedia2.png" alt="socialMedia2">
+            </div> -->
+        </div>
+        <article id="detailsSec" class="project-detailed-data hideDetails">
+            <button id="backbtn" class="back-btn" onclick="closeDetails()">Back</button>
+            <div class="project-detail-section">
+                <div class="projectname" id="projectDetails_Name">
+                    
+                </div>
+                <div class="project-more">
+                    <div class="project-main-img" id="projectDetails_MainImg">
+                        <img class="cursorBig" src="" alt="loopstudios">
+                    </div>
+                    <div class="project-main-desc">
+                        <p class="project-desc" id="projectDetails_Desc"></p>
+                        <div class="project-link">
+                            <svg width="182" height="9" viewBox="0 0 182 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M181.353 4.41422C181.547 4.21794 181.546 3.90137 181.349 3.70712L178.151 0.541758C177.954 0.347516 177.638 0.349164 177.444 0.545441C177.249 0.741717 177.251 1.0583 177.447 1.25254L180.29 4.0662L177.477 6.90932C177.283 7.10559 177.284 7.42217 177.48 7.61641C177.677 7.81066 177.993 7.80901 178.188 7.61273L181.353 4.41422ZM1.0026 5.49999L181 4.56251L180.995 3.56252L0.997396 4.50001L1.0026 5.49999Z" fill="black"/>
+                                </svg>
+                                
+                            <a class="cursorBig websiteLink" id="projectDetails_Link" target="_blank">Visit<br/>Website</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-all-ss" id="projectDetails_SS">
+                    <div class="project-ss">
+                        <img class="cursorBig" src="images/loopstudios.png" alt="loopstudios">
+                    </div>
+                    <div class="project-ss">
+                        <img class="cursorBig" src="images/socialMedia.png" alt="loopstudios">
+                    </div>
+                    <div class="project-ss">
+                        <img class="cursorBig" src="images/socialMedia2.png" alt="loopstudios">
+                    </div>
+                </div>
+                <div class="end" style="margin-bottom: 100px;">
+                    <svg width="292" height="16" viewBox="0 0 292 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="7.5" x2="132" y2="7.5" stroke="black"/>
+                        <line x1="160" y1="7.5" x2="292" y2="7.5" stroke="black"/>
+                        <line x1="139.354" y1="0.646447" x2="153.496" y2="14.7886" stroke="black"/>
+                        <line x1="138.646" y1="14.7887" x2="152.789" y2="0.646523" stroke="black"/>
+                        </svg>
+                        
+                        
+                </div>
+            </div>
+            
+        </article>
+    </section>
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Scss/login.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo2.png">
+</head>
+<body>
+    <div id='login' class="login">
+        <h3 class="login-elem">Login</h3>
+        <input class="login-elem" type="text" name="username" id="username" value="">
+        <input class="login-elem" type="password" name="password" id="password" value="">
+        <button class="login-elem" id='signin' onclick="signIn();" >Login</button>
+    </div>
+    <div id="addDetailsSec">
+        <button id="signout" onclick="signout();">Sign Out</button>
+        <div class="addDetail">
+            <input required class="adddetailcontrol" type="text" id="projectname" placeholder="Project Name">
+            <select required class="adddetailcontrol" name="category" id="category">
+                <option value="Solution">Solution</option>
+                <option value="Template">Template</option>
+                <option value="Work">Work</option>
+            </select>
+            <textarea required class="adddetailcontrol" name="projectDesc" placeholder="Project Description" id="projectdesc" cols="30" rows="10"></textarea>
+            <input required class="adddetailcontrol" type="text" id="projectlink" placeholder="Project Link">
+            <input required class="adddetailcontrol" type="file" name="mainimg" id="mainimg">
+            <div class="adddetailcontrol screenshots" id='screenshots'>
+                <button class="adddetailcontrolss" id="addss" onclick="addss()">Add SS</button>
+                <input required type="file" name="Screenshot" id="ss1" class="ss">
+                
+            </div>
+
+            <button class="adddetailcontrol" onclick="uploadNewProj();">Upload New Project</button>
+        </div>
+        <h3>Projects</h3>
+        <div class="currentProjects">
+            
+            <div class="projects" id="projects">
+                <!-- <div class="project">
+                    <p  class="projectcontrol">Loopstudios</p>
+                    <p  class="projectcontrol">Work</p>
+                    <p  class="projectcontrol">Loopstudios was one of the Frontend Mentor challenge. Learnt and tried a lot many interesting things here. Smooth hover effects makes this website even more appealing.</p>
+                    <p  class="projectcontrol">loopstudios.netlify.app</p>
+                    <div class="images">
+                         <img src="images/block.svg" alt="block">
+                        <img src="images/block.svg" alt="block">
+                        <img src="images/block.svg" alt="block">
+                        <img src="images/block.svg" alt="block">
+                        <img src="images/block.svg" alt="block">
+                    </div>
+                   
+                    <div class="action">
+                        <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                    </div>
+                    
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+    <script src="js/firebase.js"></script>
+</body>
+</html>

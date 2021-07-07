@@ -1,0 +1,149 @@
+.cursor{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    // border:2px solid var(--White);
+    // background-color: rgba(255,255,255,0.2);
+    border-radius: 50%; 
+    pointer-events: none;
+    z-index: 1;
+    background-blend-mode: difference;
+    backdrop-filter:invert(100%);
+    transform: translate(-50%,-50%);
+    // transition: all 0.2s;
+    animation: makeCursorSmall 0.2s 1 forwards;
+    
+}
+
+.cursor-grow{
+    animation: makeCursorBig 0.2s 0.2s 1 forwards;
+}
+.cursor-grow-change{
+    animation: makeCursorBig 0.2s 0.2s 1 forwards;
+    
+    &::after{
+        content: 'View Project';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // display: block;
+        // border-right: 5px solid white;
+        // border-bottom: 5px solid white;
+        // width: 25px;
+        // height: 25px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        transform: rotate(0deg) scale(0);
+        animation: makearrowvisible 0.2s 0.4s 1 forwards;
+        font-weight: 300;
+        letter-spacing: 3px;
+        text-align: center;
+        font-size: 12px;
+        filter: invert(50%);
+    }
+    // &::before{
+    //     content: '';
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 50%;
+    //     display: block;
+    //     width: 40px;
+    //     height: 5px;
+    //     transform: translate(-50%, -50%) scale(0);
+    //     background-color: white;
+    //     animation: makearrowlinevisible 0.2s 0.4s 1 forwards;
+    // }
+}
+@keyframes makeCursorBig {
+    0%{
+        width: 30px;
+        height: 30px;
+    }
+    100%{
+        width: 80px;
+        height: 80px;
+    }
+}
+@keyframes makeCursorBig2 {
+    0%{
+        border-bottom-right-radius: 50%;
+        transform: rotate(0deg);
+        width: 30px;
+        height: 30px;
+    }
+    100%{
+        border-bottom-right-radius: 0px;
+        transform: rotate(0deg);
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@keyframes makeCursorSmall {
+    0%{
+        width: 80px;
+        height: 80px;
+    }
+    100%{
+        width: 30px;
+        height: 30px;
+    }
+}
+@keyframes  makearrowvisible{
+    0%{
+        transform: rotate(0deg) scale(0);
+    }
+    100%{
+        transform: rotate(0deg) scale(1);
+    }
+}
+@keyframes  makearrowlinevisible{
+    0%{
+        transform:translate(-50%, -50%) scale(0);
+    }
+    100%{
+        transform:translate(-50%, -50%) scale(1);
+    }
+}
+@-moz-document url-prefix() {
+    .cursor{
+        background-color: rgba(0,0,0,0.5);
+    }
+    .cursor-grow-change{
+        animation: makeCursorBig 0.2s 0.2s 1 forwards;
+        
+        &::after{
+            content: 'View Project';
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // display: block;
+            // border-right: 5px solid white;
+            // border-bottom: 5px solid white;
+            // width: 25px;
+            // height: 25px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            transform: rotate(0deg) scale(0);
+            animation: makearrowvisible 0.2s 0.4s 1 forwards;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-align: center;
+            font-size: 12px;
+            filter: none;
+            color: white;
+        }
+    }
+}
+@media (max-width:800px) {
+    .cursor{
+        display: none;
+    }
+    
+}

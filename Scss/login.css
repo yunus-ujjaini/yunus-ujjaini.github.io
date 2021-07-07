@@ -1,0 +1,220 @@
+.login {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.login .login-elem {
+  margin: 0.5rem 0rem;
+  width: 15rem;
+}
+
+.login input.login-elem {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+.login #signin {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 10px 30px;
+  width: 15rem;
+  margin-top: 2rem;
+}
+
+.login #signin:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#addDetailsSec {
+  display: none;
+}
+
+#addDetailsSec #signout {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  border: 1px solid black;
+}
+
+#addDetailsSec #signout:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+#addDetailsSec .addDetail {
+  margin-top: 5rem;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#addDetailsSec .addDetail .adddetailcontrol {
+  width: 20rem;
+  margin: 0.5rem 0rem;
+}
+
+#addDetailsSec .addDetail input[type='text'].adddetailcontrol {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+#addDetailsSec .addDetail .screenshots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#addDetailsSec .addDetail .screenshots .ss {
+  margin: 0.5rem 0rem;
+}
+
+#addDetailsSec .addDetail button.adddetailcontrol {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 10px 30px;
+  width: 15rem;
+  margin-top: 2rem;
+}
+
+#addDetailsSec .addDetail button.adddetailcontrol:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#addDetailsSec .addDetail button.adddetailcontrolss {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 10px 30px;
+  width: 20rem;
+}
+
+#addDetailsSec .addDetail button.adddetailcontrolss:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#addDetailsSec .addDetail button.adddetailcontrols {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 10px 10px;
+  width: auto;
+}
+
+#addDetailsSec .addDetail button.adddetailcontrols:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#addDetailsSec .addDetail .newSSdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.2rem 0rem;
+}
+
+#addDetailsSec .currentProjects .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#addDetailsSec .currentProjects .projects .project {
+  width: 20rem;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 1rem 0.2rem;
+  min-height: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#addDetailsSec .currentProjects .projects .project img {
+  width: 100px;
+  height: 100px;
+}
+
+#addDetailsSec .currentProjects .projects .project .edit {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  margin: 1rem 0.2rem;
+  padding: 10px 20px;
+}
+
+#addDetailsSec .currentProjects .projects .project .edit:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+#addDetailsSec .currentProjects .projects .project .delete {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+  margin: 1rem 0.2rem;
+  padding: 10px 20px;
+}
+
+#addDetailsSec .currentProjects .projects .project .delete:hover {
+  cursor: pointer;
+  background-color: white;
+  color: red;
+}
+/*# sourceMappingURL=login.css.map */
