@@ -2231,13 +2231,13 @@ select {
 .project-detailed-data::after {
   content: '';
   position: fixed;
-  top: 0%;
+  top: 600vh;
   left: 0px;
   right: 0px;
   bottom: 0px;
   background-color: var(--GrayishBlue);
-  -webkit-animation: curtaindown 2s 3s 1 forwards;
-          animation: curtaindown 2s 3s 1 forwards;
+  -webkit-animation: curtaindown 3s 3s 1 forwards;
+          animation: curtaindown 3s 3s 1 forwards;
 }
 
 .project-detailed-data .back-btn {
@@ -2388,13 +2388,13 @@ select {
 .beforehideDetails::after {
   content: '';
   position: fixed;
-  top: 100vh;
+  top: 600vh;
   left: 0px;
   right: 0px;
   bottom: 0px;
   background-color: var(--GrayishBlue);
-  -webkit-animation: curtainup 1s 0s 1 forwards;
-          animation: curtainup 1s 0s 1 forwards;
+  -webkit-animation: curtainup 3s 0s 1 forwards;
+          animation: curtainup 3s 0s 1 forwards;
 }
 
 .beforehideDetails .project-detail-section .projectname {
@@ -2432,13 +2432,13 @@ select {
 .showDetails::after {
   content: '';
   position: fixed;
-  top: 0%;
+  top: 600vh;
   left: 0px;
   right: 0px;
   height: 600vh;
   background-color: var(--GrayishBlue);
-  -webkit-animation: curtaindown 1s 0s 1 forwards;
-          animation: curtaindown 1s 0s 1 forwards;
+  -webkit-animation: curtaindown 3s 0s 1 forwards;
+          animation: curtaindown 3s 0s 1 forwards;
 }
 
 .showDetails .project-detail-section .projectname {
@@ -2491,12 +2491,12 @@ select {
     height: 600vh;
   }
   90% {
-    top: 100vh;
+    top: 600vh;
     height: 600vh;
   }
   100% {
     height: 0px;
-    top: 100vh;
+    top: 600vh;
   }
 }
 
@@ -2506,26 +2506,22 @@ select {
     height: 600vh;
   }
   90% {
-    top: 100vh;
+    top: 600vh;
     height: 600vh;
   }
   100% {
     height: 0px;
-    top: 100vh;
+    top: 600vh;
   }
 }
 
 @-webkit-keyframes curtainup {
   0% {
-    top: 100vh;
+    top: 600vh;
     height: 0px;
   }
   5% {
-    top: 100vh;
-    height: 600vh;
-  }
-  90% {
-    top: 0%;
+    top: 600vh;
     height: 600vh;
   }
   100% {
@@ -2536,15 +2532,11 @@ select {
 
 @keyframes curtainup {
   0% {
-    top: 100vh;
+    top: 600vh;
     height: 0px;
   }
   5% {
-    top: 100vh;
-    height: 600vh;
-  }
-  90% {
-    top: 0%;
+    top: 600vh;
     height: 600vh;
   }
   100% {
@@ -2567,13 +2559,13 @@ select {
   .project-detailed-data::after {
     content: '';
     position: fixed;
-    top: 0px;
+    top: 600vh;
     left: 0px;
     right: 0px;
     bottom: 0px;
     background-color: var(--GrayishBlue);
-    -webkit-animation: curtaindown 2s 3s 1 forwards;
-            animation: curtaindown 2s 3s 1 forwards;
+    -webkit-animation: curtaindown 3s 3s 1 forwards;
+            animation: curtaindown 3s 3s 1 forwards;
   }
   .project-detailed-data .back-btn {
     color: var(--VeryDarkBlackBlue);
@@ -2713,13 +2705,13 @@ select {
   .beforehideDetails::after {
     content: '';
     position: fixed;
-    top: 100vh;
+    top: 600vh;
     left: 0px;
     right: 0px;
     bottom: 0px;
     background-color: var(--GrayishBlue);
-    -webkit-animation: curtainup 1s 0s 1 forwards;
-            animation: curtainup 1s 0s 1 forwards;
+    -webkit-animation: curtainup 3s 0s 1 forwards;
+            animation: curtainup 3s 0s 1 forwards;
   }
   .beforehideDetails .project-detail-section .projectname {
     opacity: 1;
@@ -2748,13 +2740,13 @@ select {
   .showDetails::after {
     content: '';
     position: fixed;
-    top: 0%;
+    top: 600vh;
     left: 0px;
     right: 0px;
     height: 200vh;
     background-color: var(--GrayishBlue);
-    -webkit-animation: curtaindown 1s 0s 1 forwards;
-            animation: curtaindown 1s 0s 1 forwards;
+    -webkit-animation: curtaindown 3s 0s 1 forwards;
+            animation: curtaindown 3s 0s 1 forwards;
   }
   .showDetails .project-detail-section .projectname {
     opacity: 1;

@@ -12,12 +12,12 @@
     &::after{
         content: '';
         position: fixed;
-        top:0%;
+        top:600vh;
         left: 0px;
         right: 0px;
         bottom: 0px;
         background-color: var(--GrayishBlue);
-        animation: curtaindown 2s 3s 1 forwards;
+        animation: curtaindown 3s 3s 1 forwards;
     }
     .back-btn{
         color: var(--VeryDarkBlackBlue);
@@ -135,12 +135,12 @@
     &::after{
         content: '';
         position: fixed;
-        top: 100vh;
+        top: 600vh;
         left: 0px;
         right: 0px;
         bottom: 0px;
         background-color: var(--GrayishBlue);
-        animation: curtainup 1s 0s 1 forwards;
+        animation: curtainup 3s 0s 1 forwards;
     }
     .project-detail-section{
         .projectname{
@@ -181,12 +181,12 @@
     &::after{
         content: '';
         position: fixed;
-        top: 0%;
+        top: 600vh;
         left: 0px;
         right: 0px;
         height: 600vh;
         background-color: var(--GrayishBlue);
-        animation: curtaindown 1s 0s 1 forwards;
+        animation: curtaindown 3s 0s 1 forwards;
     }
     .project-detail-section{
         .projectname{
@@ -233,25 +233,21 @@
         height: 600vh;
     }
     90%{
-        top: 100vh;
+        top: 600vh;
         height: 600vh;
     }
     100%{
         height: 0px;
-        top: 100vh;
+        top: 600vh;
     }
 }
 @keyframes curtainup {
     0%{
-        top: 100vh;
+        top: 600vh;
         height: 0px;
     }
     5%{
-        top: 100vh;
-        height: 600vh;
-    }
-    90%{
-        top: 0%;
+        top: 600vh;
         height: 600vh;
     }
     100%{
@@ -266,12 +262,12 @@
         &::after{
             content: '';
             position: fixed;
-            top: 0px;
+            top: 600vh;
             left: 0px;
             right: 0px;
             bottom: 0px;
             background-color: var(--GrayishBlue);
-            animation: curtaindown 2s 3s 1 forwards;
+            animation: curtaindown 3s 3s 1 forwards;
         }
         .back-btn{
             color: var(--VeryDarkBlackBlue);
@@ -398,12 +394,12 @@
         &::after{
             content: '';
             position: fixed;
-            top: 100vh;
+            top: 600vh;
             left: 0px;
             right: 0px;
             bottom: 0px;
             background-color: var(--GrayishBlue);
-            animation: curtainup 1s 0s 1 forwards;
+            animation: curtainup 3s 0s 1 forwards;
         }
         .project-detail-section{
             .projectname{
@@ -444,12 +440,12 @@
         &::after{
             content: '';
             position: fixed;
-            top: 0%;
+            top: 600vh;
             left: 0px;
             right: 0px;
             height: 200vh;
             background-color: var(--GrayishBlue);
-            animation: curtaindown 1s 0s 1 forwards;
+            animation: curtaindown 3s 0s 1 forwards;
         }
         .project-detail-section{
             .projectname{

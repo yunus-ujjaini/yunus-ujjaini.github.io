@@ -107,7 +107,6 @@ window.addEventListener("scroll", function(){ // or window.addEventListener("scr
             if(scrolled==0)
             {
                 if (st > 50){
-                    console.log("Executed");
                     let elem=document.getElementById("introSec");
                     elem.classList.remove("show");
                     elem.classList.add("hide");
@@ -151,7 +150,7 @@ window.onscroll = function() {
                 setTimeout((t=m)=>{
                     if(el3[t].classList.contains("loadProj")==false)
                     {
-                        console.log(`loading prog ${el3[t]}`);
+                        
                         el3[t].classList.add("loadProj");
                     }
                     
@@ -221,9 +220,9 @@ var config = {
                 console.log("No data available");
             }
         }).then(()=>{
-                console.log(projects);
+            
                 for (let [key, value] of Object.entries(projects)) {
-                    console.log(key,value);
+                    
                     storageRef.child(value['projName']+'/MainImg').getDownloadURL().then((url)=>{
                         work.innerHTML+=`<div class='proj ${value['category']}' data-attr='${value['projName']}' id='${value['projName']}'>
                             <img onclick="openDetails('${value['projName']}');" class="image" src="${url}" alt='${value['projName']}'>
@@ -245,7 +244,6 @@ var config = {
             let work=document.getElementById("work");
             work.classList.add("work-dhide");
 
-            console.log("Main display none");
         },2000)
         
         projectnamereceived=projectName;
@@ -272,18 +270,18 @@ var config = {
         projectDetails_Link.href=projects[projectName]['projLink'];
 
         document.getElementById("main").classList.add("haveLayer");
-        console.log("Added Layer to main");
+       
         setTimeout(()=>{
             document.getElementById("main").classList.remove("haveLayer");
-            console.log("Remove Layer from main");
+          
            
 
                 document.getElementById("detailsSec").classList.remove("hideDetails");
                 document.getElementById("detailsSec").classList.add("showDetails");
                 let elem=document.getElementById("detailsSec");
                 elem.scrollIntoView();
-                console.log("Project display show");
-            
+                
+                window.history.pushState("forward", null, "./#forward");
             
         },1000)
        
@@ -308,7 +306,7 @@ var config = {
                     document.getElementById("main").classList.remove("removeLayer");
                     
                 },1500);
-            },500);
+            },3000);
         },500)
         
 
@@ -395,20 +393,21 @@ function filter(filterstring){
 // }
 
 if (window.history && window.history.pushState) {
-    setTimeout(()=>{
-        window.history.pushState("forward", null, "./#forward");
-    },1000)
     
-
+    // window.history.pushState("forward", null, "./#forward");
     window.onpopstate = function(event) {
+        // 
+        // let backbtn=document.getElementById("detailsSec");
+        // console.log(backbtn);
+        // backbtn.scrollIntoView({ behavior: 'smooth' });
         if(document.getElementById("detailsSec").classList.contains("showDetails")==true)
         {
-            let backbtn=document.getElementById("detailsSec");
-            backbtn.scrollIntoView({ behavior: 'smooth' });
-            setTimeout(()=>{
-                closeDetails();
-                window.history.pushState("forward", null, "./#forward");
-            },1000)
+            
+            closeDetails();
+            // setTimeout(()=>{
+                
+                
+            // },5000)
             
         }
       };
