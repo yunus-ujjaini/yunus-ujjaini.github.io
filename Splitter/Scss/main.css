@@ -308,7 +308,7 @@ body {
 .mainContainer .container:nth-child(1) .people .peoplefieldparent::before {
   content: '';
   width: 20px;
-  background: url("/images/icon-person.svg");
+  background: url("./images/icon-person.svg");
   position: absolute;
   background-repeat: no-repeat;
   left: 1rem;
