@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="Scss/main.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <h1 class="web-title">Spli<br/>tter</h1>
+  <div class="mainContainer">
+    <div class="container">
+      <div class="billamt">
+        <p class="billamtlabel">Bill</p>
+        <div class="billamtfieldparent">
+          <input type="number" class="billamtfield" id="billamt" placeholder="0" onkeyup="enterBillAmt()">
+        </div>
+        
+      </div>
+      <div class="selectTip">
+        <p class="selectTiplabel">Select Tip %</p>
+        <div class="selectTipbtns">
+          <div class="selectTipbtnParent">
+            <button class="selectTipbtn" id="per5" onclick="selectTip('5');">5%</button>
+          </div>
+          <div class="selectTipbtnParent">
+            <button class="selectTipbtn" id="per10" onclick="selectTip('10');">10%</button>
+          </div>
+          <div class="selectTipbtnParent">
+            <button class="selectTipbtn active" id="per15" onclick="selectTip('15');">15%</button>
+          </div>
+          <div class="selectTipbtnParent">
+            <button class="selectTipbtn" id="per25"  onclick="selectTip('25');">25%</button>
+          </div>
+          <div class="selectTipbtnParent">
+            <button class="selectTipbtn" id="per50"  onclick="selectTip('50');">50%</button>
+          </div>
+          <div class="selectTipbtnParent">
+            <input type='number' class="selectTipbtn custom" id="custom" placeholder="Custom"  onkeyup="selectTip('custom')"/>
+          </div>
+        </div>
+      </div>
+      <div class="people">
+        <p class="peoplelabel">Number of People</p>
+        <div class="peoplefieldparent" id='peoplefieldparent'>
+          <input type="number" class="peoplefield" placeholder="2" id="persons" onkeyup="enterPersons()">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="result">
+        <div class="calc">
+          <div class="calcTitle">
+            <h3 class="calcTitle-top">
+             Tip Amount 
+            </h3>
+            <h5 class="calcTitle-bottom">
+              / person
+            </h5>
+          </div>
+          <div class="calcAmt">
+            <h2>
+              ₹<span id="tipAmt">0.00</span> 
+            </h2>
+          </div>
+        </div>
+        <div class="calc">
+          <div class="calcTitle">
+            <h3 class="calcTitle-top">
+             Total
+            </h3>
+            <h5 class="calcTitle-bottom">
+              / person
+            </h5>
+          </div>
+          <div class="calcAmt">
+            <h2>
+              ₹<span id="totalAmt">0.00</span> 
+            </h2>
+          </div>
+        </div>
+      </div>
+      <button id="reset" class="reset" onclick="reset()" disabled>RESET</button>
+    </div>
+  </div>
+
+  <div class="preloader">
+    <div class="preload-top">
+      <div class="preload1 preload"></div>
+      <div class="preload2 preload"></div>
+    </div>
+    <div class="preload-bottom">
+      <div class="preload3 preload"></div>
+      <div class="preload4 preload"></div>
+    </div>
+    <h1 class="preloadText">SPLI<br/>TTER</h1>
+   
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
