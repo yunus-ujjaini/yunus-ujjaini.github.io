@@ -79,6 +79,32 @@ body {
   background: var(--Lightgrayishcyan);
 }
 
+@-webkit-keyframes scaleDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .mainContainer {
   width: 50rem;
   height: 25rem;
@@ -92,6 +118,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 1.5rem;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0;
+  -webkit-animation: scaleDown 0.5s 2.5s 1 forwards;
+          animation: scaleDown 0.5s 2.5s 1 forwards;
 }
 
 .mainContainer .container {
@@ -358,6 +389,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0;
+  -webkit-animation: scaleDown 0.5s 3s 1 forwards;
+          animation: scaleDown 0.5s 3s 1 forwards;
 }
 
 .mainContainer .container:nth-child(2) .result {
@@ -448,6 +484,30 @@ body {
 }
 
 @media (max-width: 800px) {
+  @-webkit-keyframes slideUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(100%);
+              transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(100%);
+              transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+      opacity: 1;
+    }
+  }
   .mainContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -461,6 +521,11 @@ body {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     margin: 2rem auto 0rem;
+    -webkit-transform: scale(1) translateY(100%);
+            transform: scale(1) translateY(100%);
+    opacity: 0;
+    -webkit-animation: slideUp 0.5s 2.5s 1 forwards;
+            animation: slideUp 0.5s 2.5s 1 forwards;
   }
   .mainContainer .container {
     width: 90%;
@@ -516,6 +581,11 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-transform: scale(1) translateY(100%);
+            transform: scale(1) translateY(100%);
+    opacity: 0;
+    -webkit-animation: slideUp 0.5s 3s 1 forwards;
+            animation: slideUp 0.5s 3s 1 forwards;
   }
   .mainContainer .container:nth-child(2) .result {
     color: var(--White);
