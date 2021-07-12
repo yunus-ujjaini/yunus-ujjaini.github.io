@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&family=Ubuntu:wght@300&display=swap');
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+/* img {
+  display: block;
+  // max-width: 100%;
+} */
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+#title{
+    background-color: #ff4c68;
+    font-family:'Montserrat', sans-serif;
+    
+}
+.title-h1{
+    
+    font-size: 3.5vw;
+    line-height: 1.5;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+.container-fluid{
+    padding: 3% 15% 7%;
+}
+.navbar-brand{
+    font-size: 2.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar{
+    padding: 0 0 4.5rem;
+}
+.nav-item{
+    padding: 0 18px;
+}
+.nav-link{
+    font-size: 1.2rem;
+}
+.download-btn{
+    margin: 5% 3% 5% 0%;
+    font-size: 1.5vw;
+}
+.title-img{
+    width: 60%;
+    transform: rotate(25deg);
+    position: absolute;
+    right: 20%;
+}
+.feature-icon{
+    
+    color:#ef8172;
+    margin: 2rem;
+}
+.feature-icon:hover{
+    color: #ff4c68;
+    cursor: pointer;
+    
+}
+.feature-titles{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.feature-sub{
+    color: #8f8f8f;
+    width: 70%;
+    margin: 0px auto;
+    
+}
+#features{
+    padding: 8rem 0rem;
+    background-color: #fff;
+    position: relative;
+}
+.feature{
+    text-align: center;
+}
+
+#testimonials{
+    padding: 7% 5%;
+    text-align: center;
+    background-color: #ef8172;
+    color:#fff;
+   
+}
+.carousel-item{
+    padding: 0% 17%;
+}
+.testimonial{
+    font-family:'Montserrat', sans-serif;
+    font-size: 3.2vw;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+.testimonials-image{
+    width: 10%;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+#press{
+    background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 3%;
+}
+.pressImg{
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+#pricing{
+    padding: 100px;
+    text-align: center;
+}
+.pricingCol{
+    padding: 3% 2%;
+}
+.card{
+    height: 100%;
+}
+#cta{
+    background-color: #ff4c68;
+    color: #fff;
+    padding: 7% 25%;
+    text-align: center;
+    
+}
+.cta-text{
+    font-family:'Montserrat', sans-serif;
+    /* font-weight: bold; */
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+#footer{
+    padding: 5% 10% 0%;
+    background-color: #fff;
+    text-align: center;
+    color: #8f8f8f;
+}
+
+.icon{
+    margin: 1rem 0.5rem;
+}
+.icon:hover{
+    cursor: pointer;
+    
+    color: black;
+}
+.break{
+    display: none;
+}
+.card-header{
+    background-color: #ef8172;
+    color: #fff;
+}
+@media (max-width:1000px){
+    #title{
+        text-align: center;
+    }
+    .title-img{
+        margin-top: 2.5rem;
+        width: 80%;
+        transform: rotate(0deg);
+        position: static;
+        right: 0%;
+
+    }
+    .title-h1{
+    
+        font-size: 2.5rem;
+        line-height: 1.5;
+        font-weight: 900;
+        margin-bottom: 2rem;
+    }
+    .download-btn{
+        margin: 5% 3% 5% 0%;
+        font-size: 1rem;
+    }
+    .navbar-nav{
+        text-align: right;
+    }
+    .nav-item{
+        padding: 0px;
+    }
+    #features{
+        padding: 5rem 0rem;
+        background-color: #fff;
+        position: relative;
+    }
+    .feature{
+        margin: 2rem 0rem;
+    }
+    #testimonials{
+        padding: 8rem 2% 4rem;
+        text-align: center;
+        background-color: #ef8172;
+        color:#fff;
+       
+    }
+    .testimonial{
+        font-family:'Montserrat', sans-serif;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+    .break{
+        display: block;
+    }
+    #cta{
+        background-color: #ff4c68;
+        color: #fff;
+        padding: 15% 10%;
+        text-align: center;
+        
+    }
+    .cta-text{
+        font-family:'Montserrat', sans-serif;
+        /* font-weight: bold; */
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        font-weight: 900;
+    }
+}
