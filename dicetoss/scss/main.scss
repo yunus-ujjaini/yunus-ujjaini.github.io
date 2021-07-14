@@ -1,0 +1,292 @@
+@import 'fonts';
+@import 'reset';
+
+body{
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    background-color: #2F5D62;
+    color: #FFE268;
+    text-align: center;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// other elements css
+
+#title{
+    font-size: 4rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.dice-buttons{
+    margin-top: 4rem;
+}
+.actions{
+    margin-top: 3rem;
+
+}
+button{
+    font-weight: 900;
+    border: none;
+    padding: 0.5rem 2rem;
+    margin: 0px 0.5rem;
+    &:hover,&:focus{
+        outline: 2px dotted #FFE268;
+        outline-offset: 2px;
+        cursor: pointer;
+    }
+    &:disabled{
+        opacity: 0.4;
+        background-color: black;
+        color: white;
+        &:hover{
+            outline: 0px dotted #FFE268;
+            outline-offset: 2px;
+            cursor: not-allowed;
+            opacity: 0.4;
+        }
+    }
+}
+.add{
+    background-color: #FFE268;
+    color: #364547;
+    opacity: 0.7;
+    &:hover,&:focus{
+        opacity: 1;
+    }
+    
+}
+.remove{
+    background-color: #364547;
+    color: #FFE268;
+    opacity: 0.7;
+    &:hover,&:focus{
+        opacity: 1;
+    }
+}
+.toss{
+    background-color: #2F5D62;
+    border: 5px solid #FFE268;
+    color: #FFE268;
+    &:hover,&:focus{
+        outline: 2px dotted #FFE268;
+        outline-offset: 2px;
+        cursor: pointer;
+    }
+}
+
+
+// Dice CSS
+.dices{
+    display: flex;
+    padding: 5rem 0vw 0px;
+    margin: 0rem auto;
+    width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
+    counter-reset: diceCounter;
+    position: relative;
+    transition: all 2s;
+
+}
+.dice{
+    background-color: #FFE268;
+    color: #364547;
+    height: 8rem;
+    width: 8rem;
+    margin: 0rem 1.5rem;
+    border: 1px solid #FFE268;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0px #364547;
+    position: relative;
+    &::before{
+        counter-increment: diceCounter;
+        content: counter(diceCounter);
+        position: absolute;
+        border: 2px dotted  #FFE268;
+        top: -27%;
+        left: -20%;
+        width: 3rem;
+        height: 3rem;
+        color: #FFE268;
+        font-weight: 900;
+        display: grid;
+        place-items:center;
+        border-radius: 50%;
+        // z-index: -1;
+    }
+}
+
+.circle1{
+    background-image: url("../circle-solid.svg");
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    animation: appear 0.5s 1 forwards;
+}
+.circle2{
+    background-image: url("../circle-solid.svg"),url("../circle-solid.svg");
+    background-size: 35px 35px;
+    background-repeat: no-repeat,no-repeat;
+    background-position: 10% 10%, 90% 90%;
+    animation: appear 0.5s 1 forwards;
+}
+.circle3{
+    background-image: url("../circle-solid.svg"),url("../circle-solid.svg"),url("../circle-solid.svg");
+    background-size: 35px 35px;
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-position: 10% 10%,50%, 90% 90%;
+    animation: appear 0.5s 1 forwards;
+}
+.circle4{
+    background-image: url("../circle-solid.svg"),url("../circle-solid.svg"),url("../circle-solid.svg"),url("../circle-solid.svg");
+    background-size: 35px 35px;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+    background-position: 10% 10%,90% 10%,10% 90%, 90% 90%;
+    animation: appear 0.5s 1 forwards;
+}
+.circle5{
+    background-image: url("../circle-solid.svg"),url("../circle-solid.svg"),url("../circle-solid.svg"),url("../circle-solid.svg"),url("../circle-solid.svg");
+    background-size: 35px 35px;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+    background-position: 10% 10%,90% 10%,10% 90%, 90% 90%,50%;
+    animation: appear 0.5s 1 forwards;
+}
+.circle6{
+    background-image: url("../circle-solid.svg"),url("../circle-solid.svg"),url("../circle-solid.svg"),url("../circle-solid.svg"),url("../circle-solid.svg"),url("../circle-solid.svg");
+    background-size: 35px 35px;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+    background-position: 10% 10%,10% 50%,10% 90%,90% 10%,90% 50%, 90% 90%;
+    animation: appear 0.5s 1 forwards;
+}
+.default{
+    animation: disappear 0.5s 1 forwards;
+}
+.slideIn{
+    animation: slideUp 0.5s 1 forwards;
+}
+.slideOut{
+    animation: slideUpper 0.5s 1 forwards;
+}
+.onlybg{
+    background-color: #2F5D62;
+}
+@keyframes slideUp {
+    0%{
+        transform: translateY(50%);
+        opacity: 0;
+        height: 0rem;
+        width: 0rem;
+        margin: 0rem 0rem;
+        border: 0px solid #FFE268;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+        height: 8rem;
+        width: 8rem;
+        margin: 0rem 1.5rem;
+        border: 1px solid #FFE268;
+    }
+}
+@keyframes slideUpper {
+    0%{
+        transform: translateY(0%);
+        opacity: 1;
+        height: 8rem;
+        width: 8rem;
+        margin: 0rem 1.5rem;
+        border: 1px solid #FFE268;
+    }
+    100%{
+        transform: translateY(50%);
+        opacity: 0;
+        height: 0rem;
+        width: 0rem;
+        margin: 0rem 0rem;
+        border: 0px solid #FFE268;
+    }
+}
+
+@keyframes appear {
+    0%{
+        background-size: 600% 600%;
+        background-origin: center;
+    }
+    100%{
+        background-size: 35px 35px;
+        background-origin: center;
+    }
+}
+@keyframes disappear {
+    0%{
+        
+        background-size: 35px 35px;
+        background-origin: center;
+    }
+    100%{
+        background-size: 600% 600%;
+        background-origin: center;
+    }
+    // 100%{
+    //     background-color: #2F5D62;
+    // }
+}
+.desc{
+    opacity: 0.4;
+    
+    padding: 0px 2rem;
+    h2{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:800px) {
+    @keyframes slideUp {
+        0%{
+            transform: translateY(50%);
+            opacity: 0;
+            height: 2rem;
+            width: 2rem;
+            margin: 0rem;
+            border: 0px solid #FFE268;
+        }
+        100%{
+            transform: translateY(0%);
+            opacity: 1;
+            height: 8rem;
+            width: 8rem;
+            margin: 1.5rem;
+            border: 1px solid #FFE268;
+        }
+    }
+    @keyframes slideUpper {
+        0%{
+            transform: translateY(0%);
+            opacity: 1;
+            height: 8rem;
+            width: 8rem;
+            margin: 1.5rem;
+            border: 1px solid #FFE268;
+        }
+        100%{
+            transform: translateY(50%);
+            opacity: 0;
+            height: 2rem;
+            width: 2rem;
+            margin: 0rem;
+            border: 0px solid #FFE268;
+        }
+    }
+    #title{
+        margin-top: 2rem;
+        
+    }
+}

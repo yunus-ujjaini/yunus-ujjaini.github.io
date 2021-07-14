@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Toss</title>
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h1 id="title">Dice Toss</h1>
+            <div class="actions">
+                <button class="toss" onclick="toss()">Toss</button><br /><br />
+
+            </div>
+            <div class="dices">
+
+                <div class="dice circle1 slideIn onlybg">
+                </div>
+                <div class="dice circle2 slideIn onlybg">
+                </div>
+
+            </div>
+
+            <div class="dice-buttons">
+
+                <button class="remove" onclick="removeDice()">-</button>
+                <button class="add" onclick="addDice();">+</button>
+            </div>
+        </div>
+
+
+        <div class="desc">
+            <h2>How to use</h2>
+            <p>Click Toss button to toss the dice</p>
+            <p>All of the dice shows unique value</p>
+            <p>Person with the highest value on dice can be considered winner of the Toss</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
