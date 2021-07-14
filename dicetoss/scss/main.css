@@ -178,7 +178,7 @@ button:disabled:hover {
   color: #364547;
   height: 8rem;
   width: 8rem;
-  margin: 0rem 1.5rem;
+  margin: 2rem 1.5rem;
   border: 1px solid #FFE268;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px 10px 0px #364547;
@@ -292,7 +292,7 @@ button:disabled:hover {
     opacity: 1;
     height: 8rem;
     width: 8rem;
-    margin: 0rem 1.5rem;
+    margin: 2rem 1.5rem;
     border: 1px solid #FFE268;
   }
 }
@@ -313,7 +313,7 @@ button:disabled:hover {
     opacity: 1;
     height: 8rem;
     width: 8rem;
-    margin: 0rem 1.5rem;
+    margin: 2rem 1.5rem;
     border: 1px solid #FFE268;
   }
 }
@@ -325,7 +325,7 @@ button:disabled:hover {
     opacity: 1;
     height: 8rem;
     width: 8rem;
-    margin: 0rem 1.5rem;
+    margin: 2rem 1.5rem;
     border: 1px solid #FFE268;
   }
   100% {
@@ -346,7 +346,7 @@ button:disabled:hover {
     opacity: 1;
     height: 8rem;
     width: 8rem;
-    margin: 0rem 1.5rem;
+    margin: 2rem 1.5rem;
     border: 1px solid #FFE268;
   }
   100% {
@@ -406,6 +406,7 @@ button:disabled:hover {
 
 .desc {
   opacity: 0.4;
+  margin-top: 5rem;
   padding: 0px 2rem;
 }
 
