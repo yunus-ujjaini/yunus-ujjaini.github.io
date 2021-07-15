@@ -48,6 +48,7 @@ body{
     &:hover{
         box-shadow: inset 0px 0px 0px 20px rgb(60, 65, 74), 0px 0px 5px 0px rgb(60, 65, 74);
         cursor: pointer;
+        outline: none;
     }
     &:disabled{
         box-shadow: inset 0px 0px 0px 20px rgb(60, 65, 74), 0px 0px 0px 0px rgb(60, 65, 74);
@@ -148,6 +149,21 @@ body{
     transition: all 0.2s;
 }
 @media (max-width:900px){
+    .start{
+        &:hover{
+            box-shadow: none;
+            cursor: pointer;
+            outline: none;
+        }
+        &:disabled{
+            box-shadow: none;
+            // opacity: 0.8;
+            &:hover{
+                cursor: not-allowed;
+    
+            }
+        }
+    }
     .celebrate{
         position: fixed;
         bottom: -100vh;

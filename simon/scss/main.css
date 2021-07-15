@@ -122,6 +122,7 @@ body {
   -webkit-box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 5px 0px #3c414a;
           box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 5px 0px #3c414a;
   cursor: pointer;
+  outline: none;
 }
 
 .start:disabled {
@@ -228,6 +229,19 @@ body {
 }
 
 @media (max-width: 900px) {
+  .start:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    cursor: pointer;
+    outline: none;
+  }
+  .start:disabled {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .start:disabled:hover {
+    cursor: not-allowed;
+  }
   .celebrate {
     position: fixed;
     bottom: -100vh;
