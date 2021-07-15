@@ -155,21 +155,6 @@ body{
     display: none;
 }
 @media (max-width:900px){
-    .start{
-        &:hover{
-            box-shadow: none;
-            cursor: pointer;
-            outline: none;
-        }
-        &:disabled{
-            box-shadow: none;
-            // opacity: 0.8;
-            &:hover{
-                cursor: not-allowed;
-    
-            }
-        }
-    }
     .celebrate{
         position: fixed;
         bottom: -100vh;

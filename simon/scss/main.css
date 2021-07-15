@@ -237,19 +237,6 @@ body {
 }
 
 @media (max-width: 900px) {
-  .start:hover {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    cursor: pointer;
-    outline: none;
-  }
-  .start:disabled {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  .start:disabled:hover {
-    cursor: not-allowed;
-  }
   .celebrate {
     position: fixed;
     bottom: -100vh;
