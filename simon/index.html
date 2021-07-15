@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+    <button class="start">
+        <span class="currentscore">0</span>
+        SIMON
+        <span class="highscore"></span>
+    </button>
+    <div class="playground">
+        
+        <button class="red main"></button>
+        <button class="green main"></button>
+        <button class="blue main"></button>
+        <button class="yellow main"></button>
+    </div>
+    <div class="celebrate-text">
+        New<br/>Highscore
+    </div>
+    <img class='celebrate' src="celebrate.gif" alt="celebrate">
+    <div class="help">
+        <img src="help.png" alt="help">
+        <p class="rules">
+            Game rules
+                <br/>
+                <br/>
+                1. At the start, Simon will randomly give you a signal (one color will pop up).
+                <br/>
+                2. You have to repeat the signal by pressing the same color. 
+                <br/>
+                3. Simon will add a new random signal. 
+                <br/>
+                4. You need to repeat both the previous and the new signal by tapping color lenses in the order.
+                <br/>
+                5. Simon will keep on adding new random signals.
+                <br/>
+                6. Continue playing as long as you can repeat the sequence.
+        </p>
+    </div>
+    <div class="preloader">
+        <div class="semi-circle">
+
+        </div>
+    </div>
+    <div class="audios">
+        <audio preload="auto" id="red">
+            <source src="sounds/red.mp3">
+        </audio>
+        <audio preload="auto" id="yellow">
+            <source src="sounds/yellow.mp3">
+        </audio>
+        <audio preload="auto" id="green">
+            <source src="sounds/green.mp3">
+        </audio>
+        <audio preload="auto" id="blue">
+            <source src="sounds/blue.mp3">
+        </audio>
+        <audio preload="auto" id="wrong">
+            <source src="sounds/wrong.mp3">
+        </audio>
+        <audio preload="auto" id="celebrate">
+            <source src="sounds/celebration.wav">
+        </audio>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>

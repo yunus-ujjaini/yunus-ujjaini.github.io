@@ -1,0 +1,400 @@
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'Zen Loop', cursive;
+  font-size: 2rem;
+}
+
+.playground {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  height: 100vh;
+}
+
+.playground button {
+  background-size: 400% 400%;
+  background-position: center;
+  border: none;
+}
+
+.playground .highlight {
+  background-size: 100% 100%;
+}
+
+.playground .yellow {
+  background-image: radial-gradient(#c4c860, #f5f7b0);
+}
+
+.playground .red {
+  background-image: radial-gradient(#DF5E5E, #f0aca8);
+}
+
+.playground .blue {
+  background-image: radial-gradient(#7C83FD, #96BAFF);
+}
+
+.playground .green {
+  background-image: radial-gradient(#96ae83, #ddf6da);
+}
+
+.start {
+  position: fixed;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: none;
+  background-color: #393E46;
+  color: #EEEEEE;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 10px 1px #3c414a;
+          box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 10px 1px #3c414a;
+}
+
+.start:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 5px 0px #3c414a;
+          box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 5px 0px #3c414a;
+  cursor: pointer;
+}
+
+.start:disabled {
+  -webkit-box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 0px 0px #3c414a;
+          box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 0px 0px #3c414a;
+}
+
+.start:disabled:hover {
+  cursor: not-allowed;
+}
+
+.start .highscore {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.start .highscore::before {
+  content: 'Highscore';
+  position: absolute;
+  bottom: 100%;
+  left: 25%;
+  right: 25%;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.start .currentscore {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.start .currentscore::before {
+  content: '';
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  right: 20%;
+  background-color: #EEEEEE;
+}
+
+.celebrate {
+  position: fixed;
+  bottom: 40%;
+  left: -100vw;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.celebrate-text {
+  position: fixed;
+  top: 42%;
+  right: -100vw;
+  font-size: 5rem;
+  line-height: 4rem;
+  text-align: right;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.showcelebrate {
+  position: fixed;
+  bottom: 40%;
+  left: 10%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.showcelebrate-text {
+  position: fixed;
+  top: 42%;
+  right: 10%;
+  font-size: 5rem;
+  line-height: 4rem;
+  text-align: right;
+}
+
+.hidecelebrate {
+  position: fixed;
+  bottom: 40%;
+  left: -100vw;
+}
+
+.hidecelebrate-text {
+  position: fixed;
+  top: 42%;
+  right: -100vw;
+  font-size: 5rem;
+  line-height: 4rem;
+  text-align: right;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+@media (max-width: 900px) {
+  .celebrate {
+    position: fixed;
+    bottom: -100vh;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .celebrate-text {
+    position: fixed;
+    top: -100vh;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    font-size: 5rem;
+    line-height: 4rem;
+    text-align: center;
+  }
+  .showcelebrate {
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .showcelebrate-text {
+    position: fixed;
+    top: 10%;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    font-size: 5rem;
+    line-height: 4rem;
+    text-align: center;
+  }
+  .hidecelebrate {
+    position: fixed;
+    bottom: -100vh;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .hidecelebrate-text {
+    position: fixed;
+    top: -100vh;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    font-size: 5rem;
+    line-height: 4rem;
+    text-align: center;
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #EEEEEE;
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-animation: hidePreloader 0.5s 3s 1 forwards;
+          animation: hidePreloader 0.5s 3s 1 forwards;
+}
+
+.preloader .semi-circle {
+  height: 198px;
+  width: 198px;
+  border: 3px solid #393E46;
+  border-radius: 50%;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  -webkit-animation: rotate 5s infinite forwards;
+          animation: rotate 5s infinite forwards;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform: rotate(1800deg);
+            transform: rotate(1800deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform: rotate(1800deg);
+            transform: rotate(1800deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@-webkit-keyframes hidePreloader {
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+  90% {
+    opacity: 0;
+    top: 0px;
+  }
+  100% {
+    top: -100vh;
+    opacity: 0;
+  }
+}
+
+@keyframes hidePreloader {
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+  90% {
+    opacity: 0;
+    top: 0px;
+  }
+  100% {
+    top: -100vh;
+    opacity: 0;
+  }
+}
+
+.help {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 20rem;
+  background-color: #EEEEEE;
+  color: #393E46;
+  font-size: 1rem;
+  border-radius: 10px;
+  -webkit-clip-path: circle(10% at 90% 10%);
+          clip-path: circle(10% at 90% 10%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.help img {
+  height: 30px;
+  position: absolute;
+  top: 5%;
+  right: 5.2%;
+}
+
+.help .rules {
+  padding: 20px;
+}
+
+.help:hover {
+  -webkit-clip-path: circle(200% at 0% 0%);
+          clip-path: circle(200% at 0% 0%);
+}
+/*# sourceMappingURL=main.css.map */
