@@ -101,6 +101,10 @@ body {
 }
 
 .start {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   position: fixed;
   height: 200px;
   width: 200px;
@@ -226,6 +230,10 @@ body {
   text-align: right;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+.audios {
+  display: none;
 }
 
 @media (max-width: 900px) {
