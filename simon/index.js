@@ -65,10 +65,10 @@ $(".main").on("click",(evt)=>{
         btnPressCount++;
         let className= $(evt.target).attr('class');
         className=className.slice(0,className.indexOf(" main"));
-        console.log(className);
+        
         blinkColor(className);
         userSequence.push(className);
-        console.log("Sequence",sequence,"User Sequence",userSequence,"btn press count",btnPressCount,"level",level);
+        // console.log("Sequence",sequence,"User Sequence",userSequence,"btn press count",btnPressCount,"level",level);
         checkSeq(btnPressCount);
     }
 })
@@ -87,7 +87,7 @@ function checkSeq(btnPressCount){
         userSequence=[];
         sequence=[];
         level=0;
-        console.log("I am here");
+        // console.log("I am here"); 
         $(".start").removeAttr("disabled");
         if(newHighscore){
             document.getElementById("celebrate").play();
