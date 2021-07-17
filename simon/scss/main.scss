@@ -275,3 +275,16 @@ body{
         clip-path: circle(200% at 0% 0%);
     }
 }
+.reset{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    // width: 20rem;
+    background-color: #393E46;
+    color: #EEEEEE;;
+    font-size: 1rem;
+    // border-radius: 50%;
+    &:hover{
+        cursor: pointer;
+    }
+}

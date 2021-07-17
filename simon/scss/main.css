@@ -406,4 +406,17 @@ body {
   -webkit-clip-path: circle(200% at 0% 0%);
           clip-path: circle(200% at 0% 0%);
 }
+
+.reset {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #393E46;
+  color: #EEEEEE;
+  font-size: 1rem;
+}
+
+.reset:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=main.css.map */

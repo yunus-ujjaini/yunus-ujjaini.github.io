@@ -108,3 +108,12 @@ function checkSeq(btnPressCount){
         
     }
 }
+
+$('.reset').on("click",()=>{
+    let confirmation=confirm("Are you sure you want to reset your highscore?");
+    if(confirmation){
+        localStorage.setItem("highscore",0);
+        getHighScore();
+    }
+    
+});
