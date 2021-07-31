@@ -1,7 +1,6 @@
 $(document).ready(() => {
     $('.icon').on('click', () => {
         $('.main-content').toggleClass("overlay");
-        $('.categories').toggleClass("categories-visible");
         $('.icon').toggleClass("icon-open");
         $('.item').each(function (i) {
             var elm = $(this);
@@ -9,7 +8,16 @@ $(document).ready(() => {
                 elm.toggleClass('item-visible');
             }, i * 100);
         });
-
+        if(!$('.main-content').hasClass("overlay"))
+        {
+            setTimeout(()=>{
+                $('.categories').toggleClass("categories-visible");
+            },500)
+        }
+        else{
+            $('.categories').toggleClass("categories-visible");
+        }
+        
     });
 
     let localstore = localStorage.getItem("Category");
