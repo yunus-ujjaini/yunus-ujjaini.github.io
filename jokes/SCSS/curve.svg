@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300">
+<g stroke-width="5" fill="none" stroke="#F6416C">
+<path id="c" d="m75,75q-25,25 0,50 25,25 0,50-25,25 0,50"/>
+<use xlink:href="#c" x="75"/>
+<use xlink:href="#c" x="150"/>
+</g>
+</svg>

@@ -1,0 +1,269 @@
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: #F8F3D4;
+  font-family: 'Raleway', sans-serif;
+}
+
+::-moz-selection {
+  background-color: #F6416C;
+  color: #FFDE7D;
+}
+
+::selection {
+  background-color: #F6416C;
+  color: #FFDE7D;
+}
+
+.main-content {
+  opacity: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  text-align: center;
+}
+
+.overlay {
+  opacity: 0.2;
+}
+
+.category {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.category .categories {
+  text-align: right;
+  position: absolute;
+  display: none;
+  bottom: 150%;
+  right: -5px;
+  font-size: 1.5rem;
+}
+
+.category .categories .item {
+  background-color: #FFDE7D;
+  color: #F6416C;
+  padding: 5px 10px 5px 50px;
+  margin: 5px 0px;
+  border-radius: 50px 10px 10px 50px;
+  font-weight: 700;
+  position: relative;
+  right: -80vw;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.category .categories .item:hover {
+  cursor: pointer;
+  background-color: #f05378;
+  color: #FFDE7D;
+}
+
+.category .categories .item-visible {
+  right: 0vw;
+}
+
+.category .categories .item.active {
+  background-color: #F6416C;
+  color: #FFDE7D;
+}
+
+.category .categories-visible {
+  display: block;
+}
+
+.icon {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.icon:focus {
+  outline-color: #F6416C;
+  outline-style: dashed;
+  outline-width: 1px;
+}
+
+.icon .square {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-color: #F6416C;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.icon-open {
+  gap: 0px;
+}
+
+.icon-open .square {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-color: #F6416C;
+  border-radius: 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #F6416C;
+  text-shadow: 4px 1px #F6416C;
+  letter-spacing: 5px;
+  margin-top: 5vh;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+h1:hover {
+  text-shadow: 0px 0px #F6416C;
+}
+
+.joke-container {
+  margin: 5vh auto 0px;
+  width: 22rem;
+  padding: 30px;
+  background: url("curve.svg"), #FFDE7D;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 6rem;
+  border-radius: 40px;
+  color: #F6416C;
+  position: relative;
+  overflow: hidden;
+  min-height: 20rem;
+}
+
+.joke-container::after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #F6416C;
+  border-radius: 40px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.joke-container .joke {
+  margin-top: 50px;
+  text-align: justify;
+}
+
+.animate-joke::after {
+  top: 0px;
+}
+
+.refresh {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  padding-bottom: 3px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background: none;
+  border: none;
+}
+
+.refresh:focus {
+  outline-color: #F6416C;
+  outline-style: dashed;
+  outline-width: 1px;
+}
+
+.refresh svg {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.refresh svg:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+.refresh svg:focus {
+  cursor: pointer;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+/*# sourceMappingURL=main.css.map */
