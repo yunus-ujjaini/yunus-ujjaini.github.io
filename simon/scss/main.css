@@ -7,8 +7,7 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -51,58 +50,45 @@ select {
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
-
 body {
-  font-family: 'Zen Loop', cursive;
+  font-family: "Zen Loop", cursive;
   font-size: 2rem;
 }
 
 .playground {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
   height: 100vh;
 }
-
 .playground button {
   background-size: 400% 400%;
   background-position: center;
   border: none;
 }
-
 .playground .highlight {
   background-size: 100% 100%;
 }
-
 .playground .yellow {
   background-image: radial-gradient(#c4c860, #f5f7b0);
 }
-
 .playground .red {
   background-image: radial-gradient(#DF5E5E, #f0aca8);
 }
-
 .playground .blue {
   background-image: radial-gradient(#7C83FD, #96BAFF);
 }
-
 .playground .green {
   background-image: radial-gradient(#96ae83, #ddf6da);
 }
 
 .start {
   text-align: center;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   position: fixed;
@@ -111,66 +97,52 @@ body {
   border-radius: 50%;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border: none;
   background-color: #393E46;
   color: #EEEEEE;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 10px 1px #3c414a;
-          box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 10px 1px #3c414a;
+  box-shadow: inset 0px 0px 0px 20px rgb(60, 65, 74), 0px 0px 10px 1px rgb(60, 65, 74);
 }
-
 .start:hover {
-  -webkit-box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 5px 0px #3c414a;
-          box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 5px 0px #3c414a;
+  box-shadow: inset 0px 0px 0px 20px rgb(60, 65, 74), 0px 0px 5px 0px rgb(60, 65, 74);
   cursor: pointer;
   outline: none;
 }
-
 .start:disabled {
-  -webkit-box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 0px 0px #3c414a;
-          box-shadow: inset 0px 0px 0px 20px #3c414a, 0px 0px 0px 0px #3c414a;
+  box-shadow: inset 0px 0px 0px 20px rgb(60, 65, 74), 0px 0px 0px 0px rgb(60, 65, 74);
 }
-
 .start:disabled:hover {
   cursor: not-allowed;
 }
-
 .start .highscore {
   position: absolute;
   bottom: 12%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   font-size: 0.9rem;
   font-weight: bold;
   width: 100%;
 }
-
 .start .highscore::before {
-  content: 'Highscore';
+  content: "Highscore";
   position: absolute;
   bottom: 100%;
   left: 25%;
   right: 25%;
   border-bottom: 1px solid #EEEEEE;
 }
-
 .start .currentscore {
   position: absolute;
   top: 15%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   font-size: 1rem;
   font-weight: bold;
   width: 100%;
 }
-
 .start .currentscore::before {
-  content: '';
+  content: "";
   height: 1px;
   position: absolute;
   top: 100%;
@@ -183,7 +155,6 @@ body {
   position: fixed;
   bottom: 40%;
   left: -100vw;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -194,7 +165,6 @@ body {
   font-size: 5rem;
   line-height: 4rem;
   text-align: right;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -202,7 +172,6 @@ body {
   position: fixed;
   bottom: 40%;
   left: 10%;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -228,7 +197,6 @@ body {
   font-size: 5rem;
   line-height: 4rem;
   text-align: right;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -241,15 +209,13 @@ body {
     position: fixed;
     bottom: -100vh;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
   .celebrate-text {
     position: fixed;
     top: -100vh;
     right: 50%;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    transform: translateX(50%);
     font-size: 5rem;
     line-height: 4rem;
     text-align: center;
@@ -258,15 +224,13 @@ body {
     position: fixed;
     bottom: 0%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
   .showcelebrate-text {
     position: fixed;
     top: 10%;
     right: 50%;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    transform: translateX(50%);
     font-size: 5rem;
     line-height: 4rem;
     text-align: center;
@@ -275,21 +239,18 @@ body {
     position: fixed;
     bottom: -100vh;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
   .hidecelebrate-text {
     position: fixed;
     top: -100vh;
     right: 50%;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    transform: translateX(50%);
     font-size: 5rem;
     line-height: 4rem;
     text-align: center;
   }
 }
-
 .preloader {
   position: fixed;
   top: 0px;
@@ -297,13 +258,10 @@ body {
   background-color: #EEEEEE;
   height: 100vh;
   width: 100vw;
-  display: -ms-grid;
   display: grid;
   place-items: center;
-  -webkit-animation: hidePreloader 0.5s 3s 1 forwards;
-          animation: hidePreloader 0.5s 3s 1 forwards;
+  animation: hidePreloader 0.5s 3s 1 forwards;
 }
-
 .preloader .semi-circle {
   height: 198px;
   width: 198px;
@@ -312,55 +270,19 @@ body {
   border-bottom: none;
   border-left: none;
   border-right: none;
-  -webkit-animation: rotate 5s infinite forwards;
-          animation: rotate 5s infinite forwards;
-}
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    -webkit-transform-origin: center;
-            transform-origin: center;
-  }
-  100% {
-    -webkit-transform: rotate(1800deg);
-            transform: rotate(1800deg);
-    -webkit-transform-origin: center;
-            transform-origin: center;
-  }
+  animation: rotate 5s infinite forwards;
 }
 
 @keyframes rotate {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    -webkit-transform-origin: center;
-            transform-origin: center;
+    transform: rotate(0deg);
+    transform-origin: center;
   }
   100% {
-    -webkit-transform: rotate(1800deg);
-            transform: rotate(1800deg);
-    -webkit-transform-origin: center;
-            transform-origin: center;
+    transform: rotate(1800deg);
+    transform-origin: center;
   }
 }
-
-@-webkit-keyframes hidePreloader {
-  0% {
-    opacity: 1;
-    top: 0px;
-  }
-  90% {
-    opacity: 0;
-    top: 0px;
-  }
-  100% {
-    top: -100vh;
-    opacity: 0;
-  }
-}
-
 @keyframes hidePreloader {
   0% {
     opacity: 1;
@@ -375,7 +297,6 @@ body {
     opacity: 0;
   }
 }
-
 .help {
   position: fixed;
   right: 20px;
@@ -387,21 +308,17 @@ body {
   border-radius: 10px;
   -webkit-clip-path: circle(10% at 90% 10%);
           clip-path: circle(10% at 90% 10%);
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .help img {
   height: 30px;
   position: absolute;
   top: 5%;
   right: 5.2%;
 }
-
 .help .rules {
   padding: 20px;
 }
-
 .help:hover {
   -webkit-clip-path: circle(200% at 0% 0%);
           clip-path: circle(200% at 0% 0%);
@@ -415,8 +332,6 @@ body {
   color: #EEEEEE;
   font-size: 1rem;
 }
-
 .reset:hover {
   cursor: pointer;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
